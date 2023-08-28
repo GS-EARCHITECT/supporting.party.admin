@@ -15,8 +15,8 @@ import membership.membership_details.model.dto.PartyMembershipDetailDTO;
 import membership.membership_details.model.master.PartyMembershipDetail;
 import membership.membership_details.model.master.PartyMembershipDetailPK;
 import membership.membership_details.model.repo.PartyMembershipDetailsRepo;
-import party.party_locations.model.master.PartyLocation;
-import party.party_locations.model.master.PartyLocationPK;
+import party_locations.model.master.PartyLocation;
+import party_locations.model.master.PartyLocationPK;
 
 @Service("partyMembershipDetailsServ")
 @Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.READ_COMMITTED)
