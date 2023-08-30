@@ -1,4 +1,4 @@
-package enterprise.company.details.model.repo;
+package enterprise.company.structure_details.model.repo;
 
 import java.util.ArrayList;
 import org.springframework.data.jpa.repository.Query;
@@ -6,8 +6,8 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import enterprise.company.details.model.master.CompanyDetail;
-import enterprise.company.details.model.master.CompanyDetailPK;
+import enterprise.company.structure_details.model.master.CompanyDetail;
+import enterprise.company.structure_details.model.master.CompanyDetailPK;
 
 @Repository("companyDetailsRepo")
 public interface CompanyDetailsRepo extends CrudRepository<CompanyDetail, CompanyDetailPK> 

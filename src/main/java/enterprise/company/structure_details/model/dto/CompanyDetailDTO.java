@@ -1,4 +1,4 @@
-package enterprise.company.details.model.dto;
+package enterprise.company.structure_details.model.dto;
 
 import java.io.Serializable;
 

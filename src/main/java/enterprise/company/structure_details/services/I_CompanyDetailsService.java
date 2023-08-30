@@ -1,8 +1,8 @@
-package enterprise.company.details.services;
+package enterprise.company.structure_details.services;
 
 import java.util.ArrayList;
 
-import enterprise.company.details.model.dto.CompanyDetailDTO;
+import enterprise.company.structure_details.model.dto.CompanyDetailDTO;
 
 public interface I_CompanyDetailsService
 {

@@ -1,4 +1,4 @@
-package enterprise.company.details.services;
+package enterprise.company.structure_details.services;
 
 import java.util.ArrayList;
 import org.slf4j.Logger;
@@ -9,10 +9,10 @@ import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import enterprise.company.details.model.dto.CompanyDetailDTO;
-import enterprise.company.details.model.master.CompanyDetail;
-import enterprise.company.details.model.master.CompanyDetailPK;
-import enterprise.company.details.model.repo.CompanyDetailsRepo;
+import enterprise.company.structure_details.model.dto.CompanyDetailDTO;
+import enterprise.company.structure_details.model.master.CompanyDetail;
+import enterprise.company.structure_details.model.master.CompanyDetailPK;
+import enterprise.company.structure_details.model.repo.CompanyDetailsRepo;
 
 @Service("companyDetailServ")
 @Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.READ_COMMITTED)
