@@ -8,25 +8,25 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
-import enterprise.masters.company_class.model.dto.CompanyClassMaster_DTO;
-import enterprise.masters.company_class.model.master.CompanyClassMaster;
-import enterprise.masters.company_class.model.repo.CompanyClassMaster_Repo;
+import enterprise.company_class.model.dto.CompanyClassMaster_DTO;
+import enterprise.company_class.model.master.CompanyClassMaster;
+import enterprise.company_class.model.repo.CompanyClassMasterAdmin_Repo;
 
-@Service("companyClassServ")
+@Service("companyClassAdminServ")
 @Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.READ_COMMITTED)
-public class CompanyClassMaster_Service implements I_CompanyClassMaster_Service 
+public class CompanyClassMasterAdmin_Service implements I_CompanyClassMasterAdmin_Service 
 {
 	// private static final Logger logger =
 	// LoggerFactory.getLogger(CompanyClassMasterService.class);
 
 	@Autowired
-	private CompanyClassMaster_Repo companyClassRepo;
+	private CompanyClassMasterAdmin_Repo companyClassAdminRepo;
 
 	public CompanyClassMaster_DTO newCompanyClass(CompanyClassMaster_DTO cDTO) 
 	{
-		if (!companyClassRepo.existsById(cDTO.getCompanyClassSeqNo())) 
+		if (!companyClassAdminRepo.existsById(cDTO.getCompanyClassSeqNo())) 
 		{
-			CompanyClassMaster companyUnitClass = companyClassRepo.save(this.setCompanyClassMaster(cDTO));
+			CompanyClassMaster companyUnitClass = companyClassAdminRepo.save(this.setCompanyClassMaster(cDTO));
 			cDTO = getCompanyClassMaster_DTO(companyUnitClass);
 		}
 		return cDTO;
@@ -34,7 +34,7 @@ public class CompanyClassMaster_Service implements I_CompanyClassMaster_Service
 
 	public ArrayList<CompanyClassMaster_DTO> getAllCompanyClasses() 
 	{
-		ArrayList<CompanyClassMaster> companyUnitList = (ArrayList<CompanyClassMaster>) companyClassRepo.findAll();
+		ArrayList<CompanyClassMaster> companyUnitList = (ArrayList<CompanyClassMaster>) companyClassAdminRepo.findAll();
 		ArrayList<CompanyClassMaster_DTO> cDTOs = new ArrayList<CompanyClassMaster_DTO>();
 		cDTOs = companyUnitList != null ? this.getCompanyClassMasterDtos(companyUnitList) : null;
 		return cDTOs;
@@ -42,29 +42,28 @@ public class CompanyClassMaster_Service implements I_CompanyClassMaster_Service
 
 	public ArrayList<CompanyClassMaster_DTO> getSelectCompanyClasses(ArrayList<Long> companyUnitSeqNos) {
 		ArrayList<CompanyClassMaster_DTO> cDTOs = new ArrayList<CompanyClassMaster_DTO>();
-		CompanyClassMaster_DTO companyUnitClassDTO = null;
-		ArrayList<CompanyClassMaster> companyUnitClasss = (ArrayList<CompanyClassMaster>) companyClassRepo.findAll();
+		ArrayList<CompanyClassMaster> companyUnitClasss = (ArrayList<CompanyClassMaster>) companyClassAdminRepo.findAll();
 		cDTOs = companyUnitClasss != null ? this.getCompanyClassMasterDtos(companyUnitClasss) : null;
 		return cDTOs;
 	}
 
 	public void updCompanyClass(CompanyClassMaster_DTO cDTO) 
 	{
-		if (companyClassRepo.existsById(cDTO.getCompanyClassSeqNo()))
+		if (companyClassAdminRepo.existsById(cDTO.getCompanyClassSeqNo()))
 				{
-			companyClassRepo.save(this.setCompanyClassMaster(cDTO));
+			companyClassAdminRepo.save(this.setCompanyClassMaster(cDTO));
 		}
 		return;
 	}
 
 	public void delAllCompanyClasses() 
 	{
-		companyClassRepo.deleteAll();
+		companyClassAdminRepo.deleteAll();
 	}
 
 	public void delSelectCompanyClasses(ArrayList<Long> companyUnitSeqNos) 
 	{
-		companyClassRepo.delSelectCompanyClasses(companyUnitSeqNos);
+		companyClassAdminRepo.delSelectCompanyClasses(companyUnitSeqNos);
 
 	}
 
