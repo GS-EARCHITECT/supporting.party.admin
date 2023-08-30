@@ -1,4 +1,4 @@
-package enterprise.company.structure_details.model.master;
+package enterprise.company.company_structure_details.model.master;
 
 import java.io.Serializable;
 import javax.persistence.*;

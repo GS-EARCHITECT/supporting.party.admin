@@ -1,8 +1,9 @@
-package enterprise.company.structure_details.services;
+package enterprise.company.company_structure_details.services;
 
 import java.util.ArrayList;
-import enterprise.company.structure_details.model.dto.CompanyStructureDetail_DTO;
-import enterprise.company.structure_details.model.master.CompanyStructureDetailPK;
+
+import enterprise.company.company_structure_details.model.dto.CompanyStructureDetail_DTO;
+import enterprise.company.company_structure_details.model.master.CompanyStructureDetailPK;
 
 public interface I_CompanyStructureDetailsAdmin_Service
 {

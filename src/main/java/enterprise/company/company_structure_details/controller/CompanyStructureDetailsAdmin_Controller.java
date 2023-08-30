@@ -1,4 +1,4 @@
-package enterprise.company.structure_details.controller;
+package enterprise.company.company_structure_details.controller;
 
 import java.util.ArrayList;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,9 +16,9 @@ import org.springframework.web.bind.annotation.RestController;
 //import org.slf4j.Logger;
 //import org.slf4j.LoggerFactory;
 
-import enterprise.company.structure_details.model.dto.CompanyStructureDetail_DTO;
-import enterprise.company.structure_details.model.master.CompanyStructureDetailPK;
-import enterprise.company.structure_details.services.I_CompanyStructureDetailsAdmin_Service;
+import enterprise.company.company_structure_details.model.dto.CompanyStructureDetail_DTO;
+import enterprise.company.company_structure_details.model.master.CompanyStructureDetailPK;
+import enterprise.company.company_structure_details.services.I_CompanyStructureDetailsAdmin_Service;
 
 @RestController
 @RequestMapping("/companyStructureDetailsAdminManagement")
