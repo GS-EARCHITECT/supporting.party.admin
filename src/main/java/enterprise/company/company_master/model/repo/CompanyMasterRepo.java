@@ -1,11 +1,12 @@
-package enterprise.company.master.model.repo;
+package enterprise.company.company_master.model.repo;
 
 import java.util.ArrayList;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
-import enterprise.company.master.model.master.CompanyMaster;
+
+import enterprise.company.company_master.model.master.CompanyMaster;
 
 @Repository("companyRepo")
 public interface CompanyMasterRepo extends CrudRepository<CompanyMaster, Long> 

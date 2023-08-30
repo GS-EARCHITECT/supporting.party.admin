@@ -1,7 +1,8 @@
-package enterprise.company.master.services;
+package enterprise.company.company_master.services;
 
 import java.util.ArrayList;
-import enterprise.company.master.model.dto.CompanyMasterDTO;
+
+import enterprise.company.company_master.model.dto.CompanyMasterDTO;
 
 public interface I_CompanyMasterService
 {

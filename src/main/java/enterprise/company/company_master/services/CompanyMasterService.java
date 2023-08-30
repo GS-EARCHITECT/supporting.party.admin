@@ -1,4 +1,4 @@
-package enterprise.company.master.services;
+package enterprise.company.company_master.services;
 
 import java.util.ArrayList;
 import org.slf4j.Logger;
@@ -8,9 +8,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
-import enterprise.company.master.model.dto.CompanyMasterDTO;
-import enterprise.company.master.model.master.CompanyMaster;
-import enterprise.company.master.model.repo.CompanyMasterRepo;
+
+import enterprise.company.company_master.model.dto.CompanyMasterDTO;
+import enterprise.company.company_master.model.master.CompanyMaster;
+import enterprise.company.company_master.model.repo.CompanyMasterRepo;
 
 @Service("companyMasterServ")
 @Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.READ_COMMITTED)
