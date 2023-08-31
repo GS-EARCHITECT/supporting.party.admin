@@ -1,4 +1,4 @@
-package enterprise.company_unit_roles.details.services;
+package enterprise.company_unit_roles.structure.services;
 
 import java.util.ArrayList;
 import org.slf4j.Logger;
@@ -8,10 +8,11 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
-import enterprise.company_unit_roles.details.model.dto.CompanyUnitFunctionRoleDTO;
-import enterprise.company_unit_roles.details.model.master.CompanyUnitFunctionRole;
-import enterprise.company_unit_roles.details.model.master.CompanyUnitFunctionRolePK;
-import enterprise.company_unit_roles.details.model.repo.CompanyUnitFunctionsRolesRepo;
+
+import enterprise.company_unit_roles.structure.model.dto.CompanyUnitFunctionRoleDTO;
+import enterprise.company_unit_roles.structure.model.master.CompanyUnitFunctionRole;
+import enterprise.company_unit_roles.structure.model.master.CompanyUnitFunctionRolePK;
+import enterprise.company_unit_roles.structure.model.repo.CompanyUnitFunctionsRolesRepo;
 
 @Service("companyUnitFunctionsRolesServ")
 @Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.READ_COMMITTED)

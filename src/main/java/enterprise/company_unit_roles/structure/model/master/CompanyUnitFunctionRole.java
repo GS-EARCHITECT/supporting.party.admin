@@ -1,4 +1,4 @@
-package enterprise.company_unit_roles.details.model.master;
+package enterprise.company_unit_roles.structure.model.master;
 
 import java.io.Serializable;
 import javax.persistence.*;

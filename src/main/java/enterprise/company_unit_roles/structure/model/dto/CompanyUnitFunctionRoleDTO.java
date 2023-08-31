@@ -1,4 +1,4 @@
-package enterprise.company_unit_roles.details.model.dto;
+package enterprise.company_unit_roles.structure.model.dto;
 
 import java.io.Serializable;
 

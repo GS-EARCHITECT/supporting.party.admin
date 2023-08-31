@@ -1,4 +1,4 @@
-package enterprise.company_unit_roles.details.controller;
+package enterprise.company_unit_roles.structure.controller;
 
 import java.util.ArrayList;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,8 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 //import org.slf4j.Logger;
 //import org.slf4j.LoggerFactory;
 
-import enterprise.company_unit_roles.details.model.dto.CompanyUnitFunctionRoleDTO;
-import enterprise.company_unit_roles.details.services.I_CompanyUnitFunctionsRolesService;
+import enterprise.company_unit_roles.structure.model.dto.CompanyUnitFunctionRoleDTO;
+import enterprise.company_unit_roles.structure.services.I_CompanyUnitFunctionsRolesService;
 
 @RestController
 @RequestMapping("/companyUnitFunctionsRolesManagement")

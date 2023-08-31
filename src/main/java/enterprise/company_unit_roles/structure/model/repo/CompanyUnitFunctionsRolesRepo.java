@@ -1,12 +1,13 @@
-package enterprise.company_unit_roles.details.model.repo;
+package enterprise.company_unit_roles.structure.model.repo;
 
 import java.util.ArrayList;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
-import enterprise.company_unit_roles.details.model.master.CompanyUnitFunctionRole;
-import enterprise.company_unit_roles.details.model.master.CompanyUnitFunctionRolePK;
+
+import enterprise.company_unit_roles.structure.model.master.CompanyUnitFunctionRole;
+import enterprise.company_unit_roles.structure.model.master.CompanyUnitFunctionRolePK;
 
 @Repository("companyUnitFunctionsRolesRepo")
 public interface CompanyUnitFunctionsRolesRepo extends JpaRepository<CompanyUnitFunctionRole, CompanyUnitFunctionRolePK> 

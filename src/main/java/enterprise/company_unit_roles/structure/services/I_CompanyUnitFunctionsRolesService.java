@@ -1,7 +1,8 @@
-package enterprise.company_unit_roles.details.services;
+package enterprise.company_unit_roles.structure.services;
 
 import java.util.ArrayList;
-import enterprise.company_unit_roles.details.model.dto.CompanyUnitFunctionRoleDTO;
+
+import enterprise.company_unit_roles.structure.model.dto.CompanyUnitFunctionRoleDTO;
 
 public interface I_CompanyUnitFunctionsRolesService
 {
